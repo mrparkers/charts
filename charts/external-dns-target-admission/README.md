@@ -19,6 +19,6 @@ The chart can be customized using the following parameters:
 | Parameter          | Description                              | Default                                   |
 |--------------------|------------------------------------------|-------------------------------------------|
 | `image.repository` | The image to deploy                      | `mrparkers/external-dns-target-admission` |
-| `image.tag`        | The version of the image to deploy       | `v0.1.0`                                  |
+| `image.tag`        | The version of the image to deploy       | `v0.2.0`                                  |
 | `image.pullPolicy` | The `imagePullPolicy`                    | `IfNotPresent`                            |                                           |
 | `ipAddress`        | The IP address to use for the annotation | `127.0.0.1`                               |                                           |
