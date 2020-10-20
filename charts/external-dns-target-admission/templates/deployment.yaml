@@ -33,11 +33,15 @@ spec:
               containerPort: 8080
               protocol: TCP
           livenessProbe:
-            tcpSocket:
+            httpGet:
+              path: /healthz
               port: 8080
+              scheme: HTTPS
           readinessProbe:
-            tcpSocket:
+            httpGet:
+              path: /healthz
               port: 8080
+              scheme: HTTPS
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
