@@ -3,6 +3,15 @@ entries:
   external-dns-target-admission:
   - apiVersion: v1
     appVersion: v0.2.0
+    created: "2021-10-27T22:49:32.493560417Z"
+    description: A Helm chart for Kubernetes
+    digest: 96346804e6b327066c2c846cbac04af6b621dea1534fe949a56f6cbbd115e29a
+    name: external-dns-target-admission
+    urls:
+    - https://github.com/mrparkers/charts/releases/download/external-dns-target-admission-0.4.0/external-dns-target-admission-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    appVersion: v0.2.0
     created: "2020-10-20T16:44:20.357907404Z"
     description: A Helm chart for Kubernetes
     digest: e7c155fec04ee3c6bb8bb97086026d0302029cc8a06cbfb4986b228174aabef6
