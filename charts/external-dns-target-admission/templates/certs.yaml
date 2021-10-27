@@ -1,5 +1,5 @@
 {{- $name := include "external-dns-target-admission.fullname" . -}}
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: {{ $name }}-ss-issuer
@@ -8,7 +8,7 @@ spec:
 
 ---
 
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: {{ $name }}-ca-cert
@@ -22,7 +22,7 @@ spec:
 
 ---
 
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: {{ $name }}-ca-issuer
@@ -32,7 +32,7 @@ spec:
 
 ---
 
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: {{ $name }}-webhook-certificate
@@ -42,7 +42,5 @@ spec:
     name: {{ $name }}-ca-issuer
     kind: Issuer
   commonName: {{ $name }}.{{ .Release.Namespace }}.svc
-  organization:
-    - {{ $name }}
   dnsNames:
     - {{ $name }}.{{ .Release.Namespace }}.svc
